@@ -20,3 +20,16 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+def generated='src/main/generated'
+sourceSets {
+	main.java.srcDirs += [generated]
+}
+
+tasks.withType(JavaCompile){
+	options.annotationProcessorGeneratedSourcesDirectory = file(generated)
+}
+
+clean.doLast {
+	file(generated).deleteDir()
+}
