@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: test-postgresql
+---
+spring:
+  config:
+    activate:
+      on-profile: test-postgresql
+  datasource:
+    url: jdbc:postgresql://localhost:15432/postgres
+    username: postgres
+    password: 1111
+#    schema: classpath*:database/testdocker/schema.sql
+#    data: classpath*:database/testdocker/data.sql
+    hikari:
+      schema: classpath*:database/testdocker/schema.sql
+  data:
+    jpa:
+      hibernate:
+        ddl-auto: create
+      properties:
+        hibernate:
+          format_sql: true
+          use_sql_comments: true
+logging:
+  level: debug
