@@ -7,7 +7,11 @@ spring:
     activate:
       on-profile: test-postgresql
   datasource:
-    url:
+    url: jdbc:postgresql://localhost:15432/postgres
+    username: postgres
+    password: 1111
+    hikari:
+      schema: classpath*:database/testdocker/schema.sql
   data:
     jpa:
       hibernate:
