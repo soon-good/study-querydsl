@@ -18,6 +18,6 @@ public class Department {
     @Column(name = "DEPT_NAME")
     private String name;
 
-    @OneToMany(mappedBy = "dept")
-    private List<Employee> employees = new ArrayList<>();
+//    @OneToMany(mappedBy = "dept")
+//    private List<Employee> employees = new ArrayList<>();
 }
