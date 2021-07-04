@@ -1,6 +1,6 @@
-package io.study.qdsl.single_module.company.employee;
+package io.study.jpa.manytoone.company.employee;
 
-import io.study.qdsl.single_module.company.department.Department;
+import io.study.jpa.manytoone.company.department.Department;
 import lombok.Data;
 
 import javax.persistence.*;
