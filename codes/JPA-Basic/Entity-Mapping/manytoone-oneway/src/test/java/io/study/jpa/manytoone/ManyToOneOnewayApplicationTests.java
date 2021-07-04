@@ -1,10 +1,10 @@
-package io.study.qdsl.single_module;
+package io.study.jpa.manytoone;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JpaPrototypeApplicationTests {
+class ManyToOneOnewayApplicationTests {
 
 	@Test
 	void contextLoads() {

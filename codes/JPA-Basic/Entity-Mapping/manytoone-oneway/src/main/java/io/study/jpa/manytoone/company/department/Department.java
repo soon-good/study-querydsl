@@ -1,6 +1,6 @@
-package io.study.qdsl.single_module.company.department;
+package io.study.jpa.manytoone.company.department;
 
-import io.study.qdsl.single_module.company.employee.Employee;
+import io.study.jpa.manytoone.company.employee.Employee;
 
 import javax.persistence.*;
 import java.util.ArrayList;

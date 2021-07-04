@@ -1,7 +1,7 @@
-package io.study.qdsl.single_module;
+package io.study.jpa.manytoone;
 
-import io.study.qdsl.single_module.company.employee.Employee;
-import io.study.qdsl.single_module.company.employee.repository.EmployeeRepository;
+import io.study.jpa.manytoone.company.employee.repository.EmployeeRepository;
+import io.study.jpa.manytoone.company.employee.Employee;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
