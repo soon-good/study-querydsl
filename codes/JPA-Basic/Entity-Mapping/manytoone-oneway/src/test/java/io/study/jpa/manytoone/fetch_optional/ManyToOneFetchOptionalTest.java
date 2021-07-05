@@ -1,4 +1,4 @@
-package io.study.jpa.manytoone.fetch;
+package io.study.jpa.manytoone.fetch_optional;
 
 import io.study.jpa.manytoone.company.department.Department;
 import io.study.jpa.manytoone.company.department.repository.DepartmentRepository;
@@ -12,10 +12,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
+import java.util.List;
 
 @Transactional
 @SpringBootTest
-class ManyToOneOptionalTest {
+class ManyToOneFetchOptionalTest {
 
     @Autowired
     EntityManager em;
@@ -61,6 +62,13 @@ class ManyToOneOptionalTest {
     @Test
     @DisplayName("optional_false_테스트_리스트조회")
     public void optional_false_테스트_리스트조회(){
+        em.flush();
+        em.clear();
 
+        List<Employee> list = employeeRepository.findAll();
+
+//        for(Employee e : list){
+//            System.out.println("e >>> " + e.toString());
+//        }
     }
 }
