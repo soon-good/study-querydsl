@@ -1,10 +1,11 @@
 package io.study.jpa.manytoone.company.department;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
-@Data
 @Entity
 @Table(name = "DEPT", schema = "public")
 public class Department {
@@ -27,6 +28,22 @@ public class Department {
 
     public Department(Long id, String deptName){
         this.id = id;
+        this.deptName = deptName;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getDeptName() {
+        return deptName;
+    }
+
+    public void setDeptName(String deptName) {
         this.deptName = deptName;
     }
 }

@@ -5,7 +5,6 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Data
 @Entity
 @Table(name = "EMP", schema = "public")
 public class Employee {
@@ -17,7 +16,7 @@ public class Employee {
     @Column(name = "EMPLOYEE_NAME")
     private String name;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "DEPT_ID")
     private Department dept;
 
@@ -44,5 +43,29 @@ public class Employee {
                 ", name='" + name + '\'' +
 //                ", dept=" + dept +
                 '}';
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Department getDept() {
+        return dept;
+    }
+
+    public void setDept(Department dept) {
+        this.dept = dept;
     }
 }

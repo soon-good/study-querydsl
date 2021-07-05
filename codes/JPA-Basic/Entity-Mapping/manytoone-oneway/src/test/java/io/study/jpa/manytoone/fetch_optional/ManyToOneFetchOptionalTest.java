@@ -55,8 +55,9 @@ class ManyToOneFetchOptionalTest {
         Employee e1 = employeeRepository.findById(3L).orElseGet(()->{
             return new Employee();
         });
-
         System.out.println("e1 >>> " + e1.toString());
+        Department d = e1.getDept();
+        System.out.println("deptName >> " + d.getDeptName());
     }
 
     @Test
